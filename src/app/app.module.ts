@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ReversePhoneService } from './reverse-phone.service';
 import { PhonedisplayComponent } from './phonedisplay/phonedisplay.component'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { PhonedisplayComponent } from './phonedisplay/phonedisplay.component'
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ReversePhoneService],
   bootstrap: [AppComponent]

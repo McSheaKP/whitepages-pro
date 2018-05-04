@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ReversePhoneService} from '../reverse-phone.service'
 @Component({
   selector: 'app-phonedisplay',
   templateUrl: './phonedisplay.component.html',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhonedisplayComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _rps: ReversePhoneService){
 
-  ngOnInit() {
+    console.log(this.userPhoneNum);
+    
+
   }
 
+  
+  userPhoneNum: String = "";
+
+
+
+  ngOnInit(){
+    this._rps.getData()
+    .subscribe( data => console.log(data))
+
+
+  }
 }
