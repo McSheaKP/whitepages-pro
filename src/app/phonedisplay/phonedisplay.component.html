@@ -1,7 +1,25 @@
 <p>
-  phonedisplay works!
+ {{ userPhoneNum }}
 </p>
-<button (click) = "sendPhoneNum()"> Lookup Phone Number </button> 
-<input class = "number" type = "text" [(ngModel)] = "userPhoneNum">
+<div class = "addPhoneNum">
+<button (click) = "getPhoneData()"> Lookup Phone Number </button>
+<input class = "number" type = "text" [(ngModel)]= "userPhoneNum" >
 
 
+
+</div>
+
+
+<!--Example from todo app html
+<div class = "todoList">
+  <button (click) = "addNewToDo()"> Add Todo </button> 
+  <input class = "number" type = "text" [(ngModel)]="addTodo">
+</div>
+<div class = "toDoItem">
+<ol>
+  <li  *ngFor = "let newToDo of toDoList; let i = index">
+    {{ newToDo }} 
+    <button (click) = "deleteToDo(i)" > Delete </button>
+  </li>
+</ol>
+-->

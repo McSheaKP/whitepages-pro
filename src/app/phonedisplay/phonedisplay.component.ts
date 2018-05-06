@@ -7,16 +7,43 @@ import { ReversePhoneService} from '../reverse-phone.service'
 })
 export class PhonedisplayComponent implements OnInit {
 
+
+  userPhoneData: String = "";
+
   constructor(private _rps: ReversePhoneService){
 
-    console.log(this.userPhoneNum);
+   
+      // this._rps.userPhoneService = userPhoneNum;
+      // this._rps.getData();
+      // userPhoneNum = "";
+    }
+  
+    //Function that takes in the user input and returns the owners name
+
+    //Function that gets data when user clicks the button
+    getPhoneData(){
+      this._rps.getData();
+      this.userPhoneNum = "";
+    }
+
+    //Take in the user phone number and pass it into the services.ts contructor
+
+    
+    //this._rps.userPhoneNum = this.userPhoneNum;
+
+    // addTodo: string = "";
+    // toDoList: string[] = [];
+
+    // addNewToDo(){
+    //   this.toDoList = this._rps.addNewItem(this.toDoList, this.addTodo);
+    //   this.addTodo = "";
+    // }
+    
+    // deleteToDo(i){
+    //   this.todohandlerService.deleteItem(this.toDoList, i);
     
 
-  }
-
   
-  userPhoneNum: String = "";
-
 
 
   ngOnInit(){
